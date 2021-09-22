@@ -31,3 +31,11 @@ function writeYourGenres(){
 
 writeYourGenres();
 showMyDB();
+
+function printObj(obj){
+    for (let tmp in obj){
+    console.log(`в поле ${tmp} значения равно ${obj[tmp]}`);
+    }
+
+}
+printObj(personalMoviesDB);
