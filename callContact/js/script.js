@@ -80,9 +80,11 @@ class phoneBook{
        this.phoneContact.push(cnt);
     }
     printPhoneContact(){
+        document.write(`<h1>Телефонная книга</h1>`);
         if (this.phoneContact.length != 0) {
             for (let i = 0; i < this.phoneContact.length; i++) {
                 console.log(`Контакт ${i+1}: ${this.phoneContact[i].grtContactString()}`);
+                document.write(`<b>Контакт${i+1}:</b> ${this.phoneContact[i].grtContactString()}`);
             }
         } else {
             console.log("Контактов нет!");
@@ -128,7 +130,7 @@ class contact{
     }
 
     grtContactString(){
-        return `Имя: ${this.name}  Фамилия: ${this.lastName}  Номер телефона: ${this.callNumber}`;
+        return `Имя: ${this.name}; Фамилия: ${this.lastName}; Номер телефона: ${this.callNumber}`;
     }
 }
 
@@ -144,12 +146,12 @@ cnt3.setContact(); */
 phBook.setPhoneContact(cnt1);
 /* phBook.setPhoneContact(cnt2);
 phBook.setPhoneContact(cnt3); */
-let tmp;
+/* let tmp;
 for(let i = 0; i < 5; i++)
 {
     let temp = new contact();
     temp.setContact();
    phBook.setPhoneContact(temp);
-}
+} */
 
 phBook.printPhoneContact();
